@@ -19,7 +19,13 @@ The primary objective is to evaluate whether EEG spectral features **differ betw
 
 The core EEG indices analyzed in this project are power spectral density (PSD), frequency-specific band powers, and a cognitive workload ratio. 
 
-Specifically, frontal theta power (4–8 Hz) at **Fz** and parietal alpha power (8–12 Hz) at **Pz** are extracted to compute a **theta/alpha workload index**. These frequency-domain measures are appropriate because changes in neural oscillatory activity can reflect the cognitive resources required for working memory updating, sustained attention, and executive control during mental arithmetic.
+>According to Holm et al. (2009), mental workload can be defined by the ratio of Theta band power at the frontal-midline channel (Fz) to Alpha band power at the parietal-midline channel (Pz):
+>
+>$$\text{Mental Workload} = \frac{\text{Theta}_{\text{Fz}}}{\text{Alpha}_{\text{Pz}}}$$
+>
+>A higher Theta/Alpha ratio directly indicates an increased level of mental workload. 
+
+Specifically, frontal theta power (4–8 Hz) at Fz and parietal alpha power (8–12 Hz) at Pz are extracted to compute a **theta/alpha workload index**. These frequency-domain measures are appropriate because changes in neural oscillatory activity can reflect the cognitive resources required for working memory updating, sustained attention, and executive control during mental arithmetic.
 
 
 ## 2. Data Description
@@ -91,13 +97,6 @@ To assess data preprocessing, the following nodes were used:
   - **Artifact Removal**: Eliminates ocular and muscle artifacts using a *30-second calibration phase*, tailored to the short duration (~60 seconds) of each recording. 
   - **Moving Window**: Segments continuous EEG data into overlapping *3.0-second epochs* for localized analysis.
   - **Power Spectrum (Multitaper)**: Computes high-resolution power spectral density while minimizing spectral leakage.
-
->According to Holm et al. (2009), mental workload can be defined by the ratio of Theta band power at the frontal-midline channel (Fz) to Alpha band power at the parietal-midline channel (Pz):
->
->$$\text{Mental Workload} = \frac{\text{Theta}_{\text{Fz}}}{\text{Alpha}_{\text{Pz}}}$$
->
->A higher Theta/Alpha ratio directly indicates an increased level of mental workload. 
-
 
 ### Feature Extraction & Workload Calculation
 
