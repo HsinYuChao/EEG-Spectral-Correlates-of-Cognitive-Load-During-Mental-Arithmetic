@@ -33,7 +33,7 @@ Specifically, frontal theta power (4–8 Hz) at Fz and parietal alpha power (8�
 ### Data Source
 
 - The dataset utilized in this project is the “EEG During Mental Arithmetic Tasks” (EEGMAT), version 1.0.0, hosted on the PhysioNet database.
-- URL: https://physionet.org/content/eegmat/1.0.0/
+- [URL](https://physionet.org/content/eegmat/1.0.0/ "EEG During Mental Arithmetic Tasks")
 - The dataset contains EEG recordings collected before and during mental arithmetic task performance.
 - Each subject has two EDF files: the “_1” file represents the background EEG recorded before the task, while the “_2” file represents the EEG recorded during the mental arithmetic task.
 - The dataset consists of EEG recordings from 36 participants, divided into a good-quality counting group and a bad-quality counting group.
@@ -119,6 +119,8 @@ Preliminary observations indicated that the workload values within most time win
 After filtering out these outliers from each session, a revised mean workload, denoted as *workload'* (and represented as `workload_` in subsequent statistical analyses), was computed and documented in the **'delete outlier'** sheet. Subsequently, statistical analyses were conducted in Minitab using the **Box-Cox transformed** *workload'* data, which exhibited a normal distribution and homogeneity of variance.
 
 ## 5. Demo Video
+
+- [URL](https://drive.google.com/file/d/1-j9Utz1qo173LEpYuhLgA4ERrc7Mv1ya/view?usp=sharing "Demo Video")
 
 ## 6. Results & Interpretation
 
